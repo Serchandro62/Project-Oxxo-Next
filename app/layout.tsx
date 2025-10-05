@@ -1,19 +1,19 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+const inter = Inter({ subsets: ['latin'] });
 
-import "./globals.css"
-import Providers from '@/providers'
+import "./globals.css"; // ✅ solo tu CSS global
+import Providers from '@/providers';
 
 export const metadata: Metadata = {
   title: 'Ocso',
   description: 'Pagina web de administración de Ocsos',
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="es">
@@ -23,5 +23,5 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
-  )
+  );
 }
